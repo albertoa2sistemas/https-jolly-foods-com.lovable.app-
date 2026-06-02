@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jolly Foods - Natural Preserves</title>
+    <title>Jolly Foods & Natural Preserves</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -34,33 +34,32 @@
             }
         }
     </script>
+    <style>
+        .dropdown:hover .dropdown-menu { display: block; }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 <body class="bg-brand-cream text-gray-800 antialiased font-sans">
 
     <!-- BARRA SUPERIOR DE CONTACTO -->
     <div class="bg-brand-dark text-white text-[11px] py-2 px-4 md:px-12 flex flex-wrap justify-between items-center gap-2 border-b border-emerald-900/30">
         <div class="flex items-center gap-6 flex-wrap">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-emerald-400"></i> Envíos internacionales</span>
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-leaf text-emerald-400"></i> 100% Naturales</span>
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-emerald-400"></i> Hecho en Costa Rica</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-emerald-400"></i> Envíos Internacionales</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-leaf text-emerald-400"></i> 100% Naturales y Artesanales</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-emerald-400"></i> Origen: Costa Rica</span>
         </div>
         <div class="flex items-center gap-6 flex-wrap">
             <a href="tel:+50689435264" class="flex items-center gap-1.5 hover:text-emerald-300 transition"><i class="fa-solid fa-phone text-emerald-400"></i> +506 8943 5264</a>
-            <a href="https://wa.me/50689435264" target="_blank" class="flex items-center gap-1.5 hover:text-emerald-300 transition"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp</a>
             <a href="mailto:guillermopuchol@gmail.com" class="flex items-center gap-1.5 hover:text-emerald-300 transition"><i class="fa-regular fa-envelope text-emerald-400"></i> guillermopuchol@gmail.com</a>
-            <div class="flex items-center gap-3 ml-2 border-l border-white/20 pl-3">
-                <a href="#" class="hover:text-emerald-400 transition"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-emerald-400 transition"><i class="fa-brands fa-instagram"></i></a>
-            </div>
         </div>
     </div>
 
-    <!-- NAVBAR PRINCIPAL -->
+    <!-- NAVBAR PRINCIPAL CON MENÚS DESPLEGABLES -->
     <header class="bg-white shadow-sm sticky top-0 z-50 px-4 md:px-12 py-3.5 flex justify-between items-center">
         <div class="flex items-center gap-2">
             <div class="text-brand-green text-3xl"><i class="fa-solid fa-leaf"></i></div>
             <div>
-                <span class="block font-bold text-2xl tracking-tight text-brand-dark leading-none">Jolly foods</span>
+                <span class="block font-bold text-2xl tracking-tight text-brand-dark leading-none">Jolly Foods</span>
                 <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-bold mt-0.5">Natural Preserves</span>
             </div>
         </div>
@@ -68,421 +67,490 @@
         <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-gray-600">
             <a href="#" class="text-brand-green border-b-2 border-brand-green pb-1">Inicio</a>
             <a href="#nosotros" class="hover:text-brand-green transition">Nosotros</a>
-            <a href="#productos" class="hover:text-brand-green transition">Productos</a>
-            <a href="#cafe" class="hover:text-brand-green transition">Café Gourmet</a>
-            <a href="#contacto" class="hover:text-brand-green transition">Contacto</a>
+            
+            <!-- DESPLEGABLE: NUESTRO CATÁLOGO -->
+            <div class="relative dropdown py-2">
+                <a href="#catalogo" class="hover:text-brand-green transition flex items-center gap-1">
+                    Nuestro Catálogo <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                </a>
+                <div class="absolute left-0 mt-2 w-56 bg-white border border-gray-100 rounded-lg shadow-xl hidden dropdown-menu z-50">
+                    <div class="py-1 text-gray-700 font-medium normal-case tracking-normal">
+                        <a href="#palmitos" class="block px-4 py-2.5 hover:bg-emerald-50 hover:text-brand-green transition">Palmito</a>
+                        <a href="#frutas" class="block px-4 py-2.5 hover:bg-emerald-50 hover:text-brand-green transition">Piña</a>
+                        <a href="#cafe-gourmet" class="block px-4 py-2.5 hover:bg-emerald-50 hover:text-brand-green transition">Café</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DESPLEGABLE: CAFÉ GOURMET -->
+            <div class="relative dropdown py-2">
+                <a href="#cafe-gourmet" class="hover:text-brand-green transition flex items-center gap-1">
+                    Café Gourmet <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                </a>
+                <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-100 rounded-lg shadow-xl hidden dropdown-menu z-50">
+                    <div class="py-1 text-gray-700 font-medium normal-case tracking-normal max-h-80 overflow-y-auto text-xs">
+                        <a href="#var-villa-sarchi" class="block px-4 py-2 hover:bg-amber-50 hover:text-amber-900 transition font-semibold border-b border-gray-50 text-brand-green">☕ Villa Sarchí (Lavado)</a>
+                        <a href="#var-vs-honey" class="block px-4 py-2 hover:bg-amber-50 hover:text-amber-900 transition font-semibold border-b border-gray-50 text-brand-green">☕ VS Honey</a>
+                        <a href="#var-vs-natural" class="block px-4 py-2 hover:bg-amber-50 hover:text-amber-900 transition font-semibold border-b border-gray-50 text-brand-green">☕ VS Natural</a>
+                        <a href="#var-geisha" class="block px-4 py-2 hover:bg-amber-50 hover:text-amber-900 transition font-semibold border-b border-gray-50 text-brand-green">☕ Geisha Premium</a>
+                        <a href="#var-typica-lima" class="block px-4 py-2 hover:bg-amber-50 hover:text-amber-900 transition">☕ Typica Lima</a>
+                        <a href="#var-typica-lourdes" class="block px-4 py-2 hover:bg-amber-50 hover:text-amber-900 transition">☕ Typica Lourdes</a>
+                        <a href="#var-typica-mejorado" class="block px-4 py-2 hover:bg-amber-50 hover:text-amber-900 transition">☕ Typica Mejorado</a>
+                        <a href="#var-kenya-sl28" class="block px-4 py-2 hover:bg-amber-50 hover:text-amber-900 transition">☕ Kenya SL28</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#calidad" class="hover:text-brand-green transition">Calidad</a>
+            <a href="#pedidos" class="hover:text-brand-green transition">Pedidos</a>
+            
+            <!-- DESPLEGABLE: CONTACTO -->
+            <div class="relative dropdown py-2">
+                <a href="#contacto" class="hover:text-brand-green transition flex items-center gap-1">
+                    Contacto <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                </a>
+                <div class="absolute right-0 mt-2 w-72 bg-white border border-gray-100 rounded-lg shadow-xl hidden dropdown-menu z-50 p-4 font-normal normal-case tracking-normal">
+                    <h5 class="text-xs font-bold text-brand-dark uppercase tracking-wider mb-2 border-b pb-1">Atención Directa</h5>
+                    <div class="space-y-2 text-xs text-gray-600">
+                        <p class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i> <strong>WhatsApp:</strong> +506 8943 5264</p>
+                        <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-green"></i> <strong>Teléfono:</strong> +506 8943 5264</p>
+                        <p class="flex items-center gap-2"><i class="fa-regular fa-envelope text-blue-600"></i> <strong>Correo:</strong> guillermopuchol@gmail.com</p>
+                    </div>
+                </div>
+            </div>
         </nav>
         
-        <a href="#contacto" class="bg-brand-green text-white px-4 py-2 rounded text-xs font-semibold flex items-center gap-2 hover:bg-brand-dark transition shadow-sm">
-            <i class="fa-regular fa-comments text-sm"></i> Contáctanos
+        <a href="#pedidos" class="bg-brand-green text-white px-4 py-2 rounded text-xs font-semibold flex items-center gap-2 hover:bg-brand-dark transition shadow-sm">
+            <i class="fa-solid fa-file-invoice text-sm"></i> Hacer Pedido
         </a>
     </header>
 
     <!-- HERO BANNER -->
-    <section class="relative bg-gradient-to-br from-[#122b15] via-[#1a3d1f] to-[#112413] text-white min-h-[520px] flex items-center overflow-hidden">
+    <section class="relative bg-gradient-to-br from-[#122b15] via-[#1a3d1f] to-[#112413] text-white min-h-[440px] flex items-center overflow-hidden">
         <div class="absolute inset-0 opacity-15 bg-cover bg-center mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=1200&q=80');"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 md:px-12 w-full grid md:grid-cols-12 gap-8 relative z-10 py-16">
-            <div class="md:col-span-7 flex flex-col justify-center">
-                <span class="text-emerald-400 font-serif italic text-xl md:text-2xl mb-1 block font-medium">Sabores naturales de</span>
-                <h1 class="font-serif text-5xl md:text-6xl font-extrabold leading-[1.1] mb-5 tracking-tight">Costa Rica <br><span class="font-normal">para el mundo</span></h1>
-                <p class="text-gray-300 text-sm md:text-base max-w-lg mb-8 leading-relaxed font-light">
-                    Productos gourmet 100% naturales, elaborados con pasión, sostenibilidad y compromiso con la calidad.
+        <div class="max-w-7xl mx-auto px-6 md:px-12 w-full grid md:grid-cols-12 gap-8 relative z-10 py-12">
+            <div class="md:col-span-8 flex flex-col justify-center">
+                <span class="text-emerald-400 font-serif italic text-xl mb-1 block font-medium">Sostenibilidad y Sabor Premium</span>
+                <h1 class="font-serif text-4xl md:text-5xl font-extrabold leading-[1.1] mb-4 tracking-tight">Evolución hacia una vida<br><span class="font-normal italic text-brand-gold">más saludable, compasiva y responsable</span></h1>
+                <p class="text-gray-300 text-xs md:text-sm max-w-xl mb-6 leading-relaxed font-light">
+                    Agrupamos e impulsamos el esfuerzo de pequeños productores agroindustriales locales bajo un marco de comercio justo y respeto al medio ambiente.
                 </p>
-                <div class="flex flex-wrap gap-5 text-xs font-medium text-emerald-300/90 mb-8">
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> 100% Naturales</span>
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> Calidad Premium</span>
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> Hecho en Costa Rica</span>
-                </div>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#productos" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded text-xs font-bold tracking-wider uppercase transition flex items-center gap-2 shadow-md">
-                        Conoce nuestros productos <i class="fa-solid fa-leaf text-[10px]"></i>
-                    </a>
-                    <a href="https://wa.me/50689435264" target="_blank" class="border border-white/30 hover:bg-white/10 text-white px-5 py-3 rounded text-xs font-bold tracking-wider uppercase transition flex items-center gap-2">
-                        Contáctanos <i class="fa-brands fa-whatsapp text-sm"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="md:col-span-5 flex items-center justify-center relative mt-8 md:mt-0">
-                <div class="flex gap-3 items-end justify-center w-full max-w-md">
-                    <div class="bg-white/95 p-2.5 rounded-lg shadow-xl text-center text-gray-800 w-28 transform -rotate-3 translate-y-6 border border-gray-100">
-                        <div class="h-32 bg-emerald-50 rounded-md mb-2 flex flex-col justify-between p-2 text-emerald-800">
-                            <span class="text-[9px] font-bold uppercase tracking-widest text-emerald-600">Jolly</span>
-                            <i class="fa-solid fa-jar text-2xl my-auto opacity-70"></i>
-                            <span class="text-[10px] font-bold">PALMITO</span>
-                        </div>
-                        <span class="text-[8px] font-semibold text-gray-400 block uppercase tracking-wider">Preserves</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-lg shadow-2xl text-center text-gray-800 w-36 z-10 border border-amber-100 transform scale-105">
-                        <div class="h-40 bg-amber-50 rounded-md mb-2 flex flex-col justify-between p-2 text-amber-800">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-600">Jolly Foods</span>
-                            <i class="fa-solid fa-pineapple text-3xl my-auto opacity-80"></i>
-                            <span class="text-xs font-bold tracking-wide">PIÑA EN CONSERVA</span>
-                        </div>
-                        <span class="text-[9px] font-bold text-amber-600 uppercase tracking-widest">100% Natural</span>
-                    </div>
-                    <div class="bg-white/95 p-2.5 rounded-lg shadow-xl text-center text-gray-800 w-26 transform rotate-3 translate-y-8 border border-gray-100">
-                        <div class="h-28 bg-orange-50 rounded-md mb-2 flex flex-col justify-between p-2 text-orange-800">
-                            <span class="text-[8px] font-bold uppercase text-orange-600">Jolly</span>
-                            <i class="fa-solid fa-mortar-pestle text-xl my-auto opacity-70"></i>
-                            <span class="text-[9px] font-bold">UNTABLE CLÁSICO</span>
-                        </div>
-                        <span class="text-[7px] font-medium text-gray-400 block uppercase">Gourmet</span>
-                    </div>
+                    <a href="#catalogo" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded text-xs font-bold tracking-wider uppercase transition shadow-md">Ver Catálogo</a>
+                    <a href="#cafe-gourmet" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-3 rounded text-xs font-bold tracking-wider uppercase transition shadow-md">Cafés de Especialidad</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE NOSOTROS Y RESPALDO DE ANTONIO BARRANTES -->
-    <section id="nosotros" class="max-w-7xl mx-auto px-4 md:px-12 py-16 bg-white rounded-2xl my-10 shadow-sm border border-gray-100/50">
+    <!-- SECCIÓN: SOBRE NOSOTROS -->
+    <section id="nosotros" class="max-w-7xl mx-auto px-4 md:px-12 py-16 bg-white rounded-2xl my-10 shadow-sm border border-gray-100/60">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
-            <div class="lg:col-span-7 space-y-8">
-                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                    <div>
-                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-2">Conoce Jolly Foods & Natural Preserves</span>
-                        <h2 class="font-serif text-3xl md:text-4xl font-extrabold text-brand-dark leading-tight">
-                            Una evolución hacia una forma de vida más saludable, compasiva y responsable
-                        </h2>
-                    </div>
-                    <a href="https://www.instagram.com/reel/DWlW_eXishd/" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-green hover:text-brand-lightGreen border border-brand-green/20 hover:border-brand-green bg-brand-cream/40 px-3.5 py-2 rounded-lg transition duration-300 whitespace-nowrap shadow-sm">
-                        Conoce un poco más sobre nosotros <i class="fa-brands fa-instagram text-sm text-pink-600"></i>
-                    </a>
+            <div class="lg:col-span-7 space-y-6">
+                <div>
+                    <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-2">Nuestra Esencia · Natural Preserves SRL</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-extrabold text-brand-dark leading-tight">
+                        Donde todos ganamos: Integración social y desarrollo agrícola sostenible
+                    </h2>
+                    <div class="h-1 w-20 bg-brand-gold rounded mt-3"></div>
                 </div>
-                <div class="h-1 w-20 bg-brand-gold rounded"></div>
 
                 <p class="text-xs text-gray-600 leading-relaxed font-light">
-                    Somos una pyme 100% costarricense nacida con la misión de poner en valor los productos agrícolas de Costa Rica producidos y procesados por pequeños productores y sus asociaciones. A través de <strong>Natural Preserves</strong>, agrupamos a diferentes cooperativas de pequeños productores (como Coopehorquetas) para expandir canales de exportación y comercialización, garantizando una mejor retribución que eleve su calidad de vida.
+                    <strong>Natural Preserves SRL</strong> es una empresa de nueva creación concebida con la firme convicción de generar un impacto estructural en el agro costarricense. Nuestra <strong>misión principal</strong> radica en la puesta en valor integral de los productos agrícolas de Costa Rica, cultivados y procesados de forma minuciosa por pequeños productores locales y sus respectivas asociaciones.
+                </p>
+                
+                <p class="text-xs text-gray-600 leading-relaxed font-light">
+                    Actuamos como un motor de transformation reuniendo bajo la marca de <strong>Natural Preserves</strong> a diversas agrupaciones, como la prestigiosa cooperativa <strong>Coopehorquetas</strong>. En sus instalaciones, hemos implementado una línea completa de tecnología avanzada orientada a la producción de conserva de palmito de la más alta fidelidad y en variados formatos comerciales, tanto en envases de vidrio como al vacío, resguardando la inocuidad y la excelencia nutricional.
                 </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-brand-cream/50 p-5 rounded-xl border border-emerald-800/5">
-                        <div class="flex items-center gap-2 text-brand-green font-bold text-xs uppercase tracking-wider mb-2">
-                            <i class="fa-solid fa-bullseye text-base"></i> Nuestra Misión
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-relaxed">
-                            Puesta en valor de productos agrícolas locales, promoviendo prácticas agrícolas sostenibles para el respeto al medio ambiente y ofreciendo productos frescos, prácticos, saludables y nutritivos.
-                        </p>
-                    </div>
-                    <div class="bg-brand-cream/50 p-5 rounded-xl border border-emerald-800/5">
-                        <div class="flex items-center gap-2 text-brand-green font-bold text-xs uppercase tracking-wider mb-2">
-                            <i class="fa-solid fa-eye text-base"></i> Nuestra Visión
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-relaxed">
-                            Ser una empresa líder en el mercado por su excelente calidad total, desarrollo e integración social constante en todas nuestras comunidades.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="border-t border-gray-100 pt-6">
-                    <h3 class="font-bold text-xs uppercase text-brand-dark tracking-wider mb-3">Delicias de Palmito: Innovación Vegetal</h3>
-                    <p class="text-[11px] text-gray-600 leading-relaxed mb-4">
-                        Desarrollamos el primer dip/untable costarricense con base vegetal que puede sustituir los lácteos en el uso diario y para cocinar. Ideal para disfrutar como boca, merienda, o base para salsas de pastas y platos preferidos. Es un producto 100% natural, vegano, apto para dietas Keto y completamente libre de gluten y lactosa.
-                    </p>
-                    <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-[10px] text-emerald-700 font-semibold bg-emerald-50/40 p-3 rounded-lg border border-emerald-100/30">
-                        <span>✓ 100% Artesanal y Vegetal</span>
-                        <span>✓ Sin conservantes químicos</span>
-                        <span>✓ Fuente de Fibra natural</span>
-                        <span>✓ Proteína, Hierro, Potasio y Vitamina C</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5 bg-brand-dark text-white p-6 md:p-8 rounded-2xl border border-emerald-950 shadow-md relative overflow-hidden flex flex-col justify-between h-full min-h-[460px]">
-                <div class="absolute inset-0 opacity-5 bg-cover bg-center mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80');"></div>
-                
-                <div class="relative z-10 space-y-5">
-                    <div class="flex items-center gap-2">
-                        <span class="text-amber-400 text-lg">☕</span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400">Café de Especialidad</span>
-                    </div>
-                    
-                    <h3 class="font-serif text-2xl md:text-3xl font-bold leading-tight text-white">
-                        El respaldo de un gran profesional
-                    </h3>
-                    
-                    <p class="text-xs text-gray-300 leading-relaxed font-light">
-                        Para asegurar la máxima excelencia en cada grano, en Jolly Foods contamos con el apoyo, guía y asesoría invaluable en el cuidado de nuestra finca, así como en la producción y rigurosa selección de nuestro café, de <strong>Antonio Barrantes</strong>.
-                    </p>
-                    
-                    <p class="text-xs text-gray-300 leading-relaxed font-light">
-                        Antonio es reconocido como un gran profesional en el mundo cafetero. Su impecable trayectoria e implicación directa garantizan que nuestro café destaque por sus notas auténticas y un nivel gourmet insuperable.
-                    </p>
-                </div>
-
-                <div class="relative z-10 mt-8 bg-white/5 border border-white/10 p-4 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 backdrop-blur-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center text-lg">
-                            <i class="fa-solid fa-user-gear"></i>
-                        </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+                    <div class="bg-gradient-to-br from-emerald-50 to-white p-5 rounded-xl border border-brand-green/10 flex flex-col justify-between shadow-sm hover:border-brand-green/30 transition">
                         <div>
-                            <span class="block text-xs font-bold text-white tracking-wide">Antonio Barrantes</span>
-                            <span class="block text-[10px] text-emerald-400">Experto en Producción Cafetera</span>
+                            <span class="text-brand-green text-lg mb-1 block"><i class="fa-solid fa-users"></i></span>
+                            <h4 class="font-bold text-xs text-brand-dark uppercase tracking-wider mb-1">Conócenos un poco más</h4>
+                            <p class="text-[11px] text-gray-500 leading-relaxed mb-4">Descubre en este video nuestras raíces, labor en comunidad y el procesamiento artesanal en el corazón de Costa Rica.</p>
                         </div>
+                        <a href="https://www.instagram.com/reel/DWlW_eXishd/" target="_blank" class="w-full text-center bg-brand-green hover:bg-brand-dark text-white text-[10px] uppercase font-bold tracking-widest py-2 rounded shadow-sm transition">
+                            Ver Video de Presentación <i class="fa-brands fa-instagram ml-1 text-xs"></i>
+                        </a>
                     </div>
-                    
-                    <a href="https://www.instagram.com/reel/DFCmrJEq8Na/" target="_blank" class="w-full sm:w-auto text-center bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[10px] uppercase tracking-wider px-4 py-2.5 rounded-lg transition duration-300 flex items-center justify-center gap-2 whitespace-nowrap shadow-sm">
-                        Conoce a Antonio Barrantes <i class="fa-brands fa-instagram text-xs"></i>
-                    </a>
+
+                    <div class="bg-gradient-to-br from-amber-50/70 to-white p-5 rounded-xl border border-brand-gold/20 flex flex-col justify-between shadow-sm hover:border-brand-gold/50 transition">
+                        <div>
+                            <span class="text-brand-gold text-lg mb-1 block"><i class="fa-solid fa-award"></i></span>
+                            <h4 class="font-bold text-xs text-brand-dark uppercase tracking-wider mb-1">Asesoría de Primer Nivel</h4>
+                            <p class="text-[11px] text-gray-500 leading-relaxed mb-4">Conoce el riguroso trabajo de campo y la experiencia cafetera que respalda la calidad inquebrantable de nuestras fincas.</p>
+                        </div>
+                        <a href="https://www.instagram.com/reel/DFCmrJEq8Na/" target="_blank" class="w-full text-center bg-brand-gold hover:bg-amber-700 text-white text-[10px] uppercase font-bold tracking-widest py-2 rounded shadow-sm transition">
+                            Conoce a Antonio Barrantes <i class="fa-brands fa-instagram ml-1 text-xs"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- NUESTROS PRODUCTOS ESTRELLA -->
-    <section id="productos" class="max-w-7xl mx-auto px-4 md:px-12 py-16">
-        <div class="text-center mb-12">
-            <h2 class="text-brand-dark text-lg font-bold tracking-widest uppercase flex items-center justify-center gap-2">
-                <span class="text-emerald-600 text-sm">🌿</span> Nuestros Productos Estrella <span class="text-emerald-600 text-sm">🌿</span>
-            </h2>
-            <div class="h-0.5 w-16 bg-brand-gold/40 mx-auto mt-2"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-5">
-            <div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm flex flex-col justify-between hover:shadow-md transition">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=300&q=80" alt="Palmito" class="w-full h-32 object-cover rounded-lg mb-3.5">
-                    <h3 class="font-bold text-xs text-brand-dark uppercase tracking-wide mb-1.5">Palmito en Conserva</h3>
-                    <p class="text-[11px] text-gray-500 leading-relaxed">Tierno, fresco y natural. Ideal para ensaladas, entradas y recetas gourmet.</p>
-                </div>
-                <a href="#contacto" class="mt-4 w-full bg-brand-green hover:bg-brand-dark text-white text-[10px] uppercase font-bold tracking-wider py-2 rounded-md transition block text-center">Cotizar</a>
-            </div>
-
-            <div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm flex flex-col justify-between hover:shadow-md transition">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=300&q=80" alt="Piña" class="w-full h-32 object-cover rounded-lg mb-3.5">
-                    <h3 class="font-bold text-xs text-brand-dark uppercase tracking-wide mb-1.5">Piña en Conserva</h3>
-                    <p class="text-[11px] text-gray-500 leading-relaxed">Dulce, jugosa y seleccionada en su punto perfecto. En rodajas y trozos.</p>
-                </div>
-                <a href="#contacto" class="mt-4 w-full bg-brand-green hover:bg-brand-dark text-white text-[10px] uppercase font-bold tracking-wider py-2 rounded-md transition block text-center">Cotizar</a>
-            </div>
-
-            <div class="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm flex flex-col justify-between hover:shadow-md transition">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=300&q=80" alt="Jugo" class="w-full h-32 object-cover rounded-lg mb-3.5">
-                    <h3 class="font-bold text-xs text-brand-dark uppercase tracking-wide mb-1.5">Jugo de Piña Natural</h3>
-                    <p class="text-[11px] text-gray-500 leading-relaxed">100% natural, sin azúcar añadida ni conservantes. Sabor tropical puro.</p>
-                </div>
-                <a href="#contacto" class="mt-4 w-full bg-brand-green hover:bg-brand-dark text-white text-[10px] uppercase font-bold tracking-wider py-2 rounded-md transition block text-center">Cotizar</a>
-            </div>
-
-            <!-- Línea Untables -->
-            <div class="col-span-1 md:col-span-3 grid grid-cols-3 gap-3 border border-emerald-800/10 p-3 rounded-xl bg-emerald-50/25">
-                <div class="col-span-3 text-center bg-brand-dark text-white text-[9px] font-bold tracking-widest uppercase py-1.5 rounded-md">
-                    Línea Palmito de Untables
-                </div>
-                <div class="bg-white p-2.5 text-center rounded-lg shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-20 bg-amber-50/50 rounded-md mb-2 flex items-center justify-center text-amber-700 text-xl"><i class="fa-solid fa-jar"></i></div>
-                        <h4 class="font-bold text-[11px] text-brand-dark leading-tight">Untable Clásico</h4>
-                        <p class="text-[9px] text-gray-400 mt-1 leading-snug">Suave y cremoso, para todo momento.</p>
+            <div class="lg:col-span-5 bg-brand-dark text-white p-6 md:p-8 rounded-2xl border border-emerald-950 shadow-md flex flex-col justify-between h-full min-h-[400px]">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="text-brand-gold text-sm">☕</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400">Excelencia en el Ámbito Cafetero</span>
                     </div>
-                    <a href="#contacto" class="mt-2.5 w-full bg-brand-green text-white text-[8px] py-1 rounded font-bold uppercase tracking-wider block">Pedir</a>
-                </div>
-                <div class="bg-white p-2.5 text-center rounded-lg shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-20 bg-amber-50/50 rounded-md mb-2 flex items-center justify-center text-amber-700 text-xl"><i class="fa-solid fa-jar"></i></div>
-                        <h4 class="font-bold text-[11px] text-brand-dark leading-tight">Con Pimienta</h4>
-                        <p class="text-[9px] text-gray-400 mt-1 leading-snug">Con un toque de pimienta negra gourmet.</p>
-                    </div>
-                    <a href="#contacto" class="mt-2.5 w-full bg-brand-green text-white text-[8px] py-1 rounded font-bold uppercase tracking-wider block">Pedir</a>
-                </div>
-                <div class="bg-white p-2.5 text-center rounded-lg shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="w-full h-20 bg-amber-50/50 rounded-md mb-2 flex items-center justify-center text-amber-700 text-xl"><i class="fa-solid fa-jar"></i></div>
-                        <h4 class="font-bold text-[11px] text-brand-dark leading-tight">Con Tomate</h4>
-                        <p class="text-[9px] text-gray-400 mt-1 leading-snug">Delicado y aromático con finas hierbas.</p>
-                    </div>
-                    <a href="#contacto" class="mt-2.5 w-full bg-brand-green text-white text-[8px] py-1 rounded font-bold uppercase tracking-wider block">Pedir</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CAFÉ GOURMET DE COSTA RICA -->
-    <section id="cafe" class="bg-[#0b140c] text-white py-16 border-y border-emerald-950">
-        <div class="max-w-7xl mx-auto px-4 md:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                <div class="lg:col-span-4 space-y-6">
-                    <div>
-                        <h2 class="font-serif text-4xl font-bold tracking-tight">Café Gourmet</h2>
-                        <p class="font-serif text-2xl text-emerald-400 italic mt-1">de Costa Rica</p>
-                    </div>
+                    <h3 class="font-serif text-2xl font-bold leading-snug">
+                        El Respaldo de Antonio Barrantes
+                    </h3>
                     <p class="text-xs text-gray-300 leading-relaxed font-light">
-                        Descubre nuestra selección de cafés de especialidad, cultivados en las mejores regiones de Costa Rica, con granos 100% arábica de la más alta calidad y trazabilidad.
+                        En Jolly Foods entendemos que el café de alta especialidad no es fruto de la casualidad, sino de la disciplina y el conocimiento profundo de la tierra. Por ello, nos enorgullece declarar que **contamos con el apoyo estratégico, supervisión y la asesoría continua de un gran profesional en el ámbito cafetero mundial: Antonio Barrantes**.
                     </p>
-                    <div class="grid grid-cols-3 gap-2 pt-2 text-center">
-                        <div class="p-3 bg-white/5 rounded-lg border border-white/5">
-                            <i class="fa-solid fa-mug-hot text-amber-400 text-lg mb-1.5 block"></i>
-                            <span class="block text-[9px] font-medium text-gray-300">Café 100% Arábica</span>
-                        </div>
-                        <div class="p-3 bg-white/5 rounded-lg border border-white/5">
-                            <i class="fa-solid fa-hand-holding-heart text-amber-400 text-lg mb-1.5 block"></i>
-                            <span class="block text-[9px] font-medium text-gray-300">Cosecha Selectiva</span>
-                        </div>
-                        <div class="p-3 bg-white/5 rounded-lg border border-white/5">
-                            <i class="fa-solid fa-fire-flame-curved text-amber-400 text-lg mb-1.5 block"></i>
-                            <span class="block text-[9px] font-medium text-gray-300">Tostado Artesanal</span>
-                        </div>
+                    <p class="text-xs text-gray-300 leading-relaxed font-light">
+                        Antonio es una figura de intachable renombre, cuya trayectoria en la selección minuciosa de micro-lotes, optimización de varietales y perfeccionamiento técnico aporta a nuestra marca un sello de distinción inigualable.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-emerald-800 flex items-center justify-center font-serif text-brand-gold font-bold text-xs">AB</div>
+                    <div>
+                        <span class="block text-xs font-bold">Antonio Barrantes</span>
+                        <span class="block text-[10px] text-gray-400">Consultor y Productor Cafetero de Especialidad</span>
                     </div>
-                    <a href="#contacto" class="w-full bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider py-3 rounded-lg transition block text-center">
-                        Conoce nuestras variedades
-                    </a>
-                </div>
-
-                <div class="lg:col-span-8 grid grid-cols-3 gap-2.5">
-                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80" alt="Granos" class="w-full h-36 object-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80" alt="Báscula" class="w-full h-36 object-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80" alt="Planta" class="w-full h-36 object-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=400&q=80" alt="Hojas" class="w-full h-36 object-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=400&q=80" alt="Manos" class="w-full h-36 object-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=400&q=80" alt="Taza" class="w-full h-36 object-cover rounded-lg">
-                </div>
-            </div>
-
-            <div class="mt-12 pt-6 border-t border-white/10 text-center">
-                <p class="text-[11px] tracking-widest uppercase text-emerald-400 mb-4 font-bold">🍂 Nuestras Variedades de Café 🍂</p>
-                <div class="flex flex-wrap justify-center gap-2.5 text-[10px] uppercase font-semibold">
-                    <span class="border border-white/10 px-3 py-1.5 rounded-md bg-white/5 text-gray-300">Villa Sarchí</span>
-                    <span class="border border-white/10 px-3 py-1.5 rounded-md bg-white/5 text-gray-300">VS Honey</span>
-                    <span class="border border-white/10 px-3 py-1.5 rounded-md bg-white/5 text-gray-300">VS Natural</span>
-                    <span class="border border-white/10 px-3 py-1.5 rounded-md bg-white/5 text-gray-300">Geisha</span>
-                    <span class="border border-white/10 px-3 py-1.5 rounded-md bg-white/5 text-gray-300">Typica Lima</span>
-                    <span class="border border-white/10 px-3 py-1.5 rounded-md bg-white/5 text-gray-300">Typica Lourdes</span>
-                    <span class="border border-white/10 px-3 py-1.5 rounded-md bg-white/5 text-gray-300">Typica Mejorado</span>
-                    <span class="border border-white/10 px-3 py-1.5 rounded-md bg-white/5 text-gray-300">Kenya SL28</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GESTIÓN DE PEDIDOS Y FORMULARIO DE CONTACTO -->
-    <section id="contacto" class="max-w-7xl mx-auto px-4 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex flex-col justify-between">
-            <div>
-                <h3 class="text-base font-bold text-brand-dark text-center mb-0.5">Pedidos de Café Tostado</h3>
-                <p class="text-xs text-emerald-600 text-center font-bold tracking-wide mb-5">🔸 Paquetes de 1 kg 🔸</p>
-                <p class="text-[11px] text-gray-500 mb-5 text-center leading-relaxed">Todas nuestras variedades disponibles en presentaciones de 1 kg, tostado artesanalmente para resaltar aromas.</p>
-                <div class="grid grid-cols-2 gap-3 text-[11px] text-gray-700 font-medium border-t border-gray-50 pt-4">
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-emerald-600 text-xs"></i> Villa Sarchí</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-emerald-600 text-xs"></i> Typica Lima</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-emerald-600 text-xs"></i> VS Honey</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-emerald-600 text-xs"></i> Typica Lourdes</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-emerald-600 text-xs"></i> VS Natural</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-emerald-600 text-xs"></i> Typica Mejorado</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-emerald-600 text-xs"></i> Geisha</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-square-check text-emerald-600 text-xs"></i> Kenya SL28</span>
+    <!-- SECCIÓN: NUESTRO CATÁLOGO (CON LOS 3 CUADRADITOS REQUERIDOS) -->
+    <section id="catalogo" class="max-w-7xl mx-auto px-4 md:px-12 py-16 border-t border-gray-100 scroll-mt-20">
+        <div class="text-center mb-12">
+            <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-1">Línea de Producción Agroindustrial</span>
+            <h2 class="font-serif text-3xl font-extrabold text-brand-dark">Nuestro Catálogo</h2>
+            <div class="h-0.5 w-16 bg-brand-gold mx-auto mt-2"></div>
+            <p class="text-xs text-gray-400 mt-3">Selecciona una categoría para explorar en detalle cada uno de nuestros productos cosechados de manera sostenible.</p>
+        </div>
+
+        <!-- RECUADROS INTERACTIVOS PRINCIPALES (PALMITO, PIÑA, CAFÉ) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <!-- Cuadrado Palmito -->
+            <a href="#palmitos" class="group relative block bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-brand-green/30 transition duration-300">
+                <div class="h-56 w-full bg-gray-50 flex items-center justify-center overflow-hidden p-4">
+                    <img src="un.PNG" alt="Palmito" class="h-full object-contain group-hover:scale-105 transition duration-300">
                 </div>
-            </div>
-            <div class="mt-6 bg-brand-dark text-white p-3 rounded-lg text-center text-[10px] font-medium flex items-center justify-center gap-2">
-                <i class="fa-solid fa-headset text-emerald-400 text-xs"></i> Contáctanos directamente para tarifas de lote.
+                <div class="p-5 text-center bg-white border-t border-gray-50">
+                    <h3 class="font-serif text-lg font-bold text-brand-dark group-hover:text-brand-green transition">Palmito</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Conservas y línea de untables 100% vegetales</p>
+                    <span class="inline-block mt-3 text-[10px] uppercase font-bold tracking-wider text-brand-green bg-emerald-50 px-3 py-1 rounded">Ver Variedades ↓</span>
+                </div>
+            </a>
+
+            <!-- Cuadrado Piña -->
+            <a href="#frutas" class="group relative block bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-brand-green/30 transition duration-300">
+                <div class="h-56 w-full bg-gray-50 flex items-center justify-center overflow-hidden p-4">
+                    <img src="PIÑA.webp" alt="Piña" class="h-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 text-center bg-white border-t border-gray-50">
+                    <h3 class="font-serif text-lg font-bold text-brand-dark group-hover:text-brand-green transition">Piña</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Rodajas en conserva y jugos concentrados dulces</p>
+                    <span class="inline-block mt-3 text-[10px] uppercase font-bold tracking-wider text-brand-green bg-emerald-50 px-3 py-1 rounded">Ver Variedades ↓</span>
+                </div>
+            </a>
+
+            <!-- Cuadrado Café -->
+            <a href="#cafe-gourmet" class="group relative block bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-brand-green/30 transition duration-300">
+                <div class="h-56 w-full bg-gray-50 flex items-center justify-center overflow-hidden p-4">
+                    <img src="PAQUETE DE CAFE.jfif" alt="Café Gourmet" class="h-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 text-center bg-white border-t border-gray-50">
+                    <h3 class="font-serif text-lg font-bold text-brand-dark group-hover:text-brand-green transition">Café</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Granos arábica de especialidad y micro-lotes</p>
+                    <span class="inline-block mt-3 text-[10px] uppercase font-bold tracking-wider text-brand-green bg-emerald-50 px-3 py-1 rounded">Ver Variedades ↓</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- APARTADO DETALLADO: PALMITO -->
+        <div id="palmitos" class="mb-16 scroll-mt-24">
+            <h3 class="font-serif text-2xl font-bold text-brand-dark mb-6 pb-2 border-b border-gray-100 flex items-center gap-2">
+                <span class="text-brand-green"><i class="fa-solid fa-jar"></i></span> Línea Completa de Palmito
+            </h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Conservas -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-3">
+                    <span class="text-[10px] uppercase tracking-wider font-bold text-brand-green bg-emerald-50 px-2.5 py-1 rounded">Formatos Clásicos</span>
+                    <h4 class="font-serif text-lg font-bold text-brand-dark">Conservas en Vidrio y al Vacío (Coopehorquetas)</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">
+                        Procesado bajo estrictas directrices en la planta de Coopehorquetas. Nuestro palmito destaca por su textura tierna, uniformidad y frescura inmediata en el corte. Disponible para distribución en formatos enteros, rodajas, trozos y ensalada.
+                    </p>
+                </div>
+                <!-- Untables Jolly Foods -->
+                <div class="bg-brand-dark text-white p-6 rounded-xl shadow-md space-y-3 border border-emerald-950">
+                    <span class="text-[10px] uppercase tracking-wider font-bold text-brand-gold bg-white/10 px-2.5 py-1 rounded">Innovación Vegetal</span>
+                    <h4 class="font-serif text-lg font-bold text-white">Cremas y Untables de Palmito Jolly Foods</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed font-light">
+                        El primer dip costarricense de base vegetal concebido para sustituir por completo a los lácteos tradicionales. Es 100% natural, artesanal, apto para dietas Keto y completamente libre de gluten, aditivos químicos o lactosa[cite: 1, 2].
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex flex-col justify-between">
-            <div>
-                <h3 class="text-base font-bold text-brand-dark text-center mb-0.5">Pedidos de Café en Verde</h3>
-                <p class="text-xs text-emerald-600 text-center font-bold tracking-wide mb-5">Grano Verde 100% Arábica</p>
-                <p class="text-[11px] text-gray-500 mb-5 text-center leading-relaxed">Café de alta calidad óptimo para tostadores comerciales y distribuidores mundiales.</p>
-                <div class="space-y-3 text-[11px] text-gray-700 font-medium border-t border-gray-50 pt-4">
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-circle-arrow-up text-brand-gold"></i> Calidad de Exportación certificada</p>
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-shield-circle-check text-brand-gold"></i> Trazabilidad de origen Garantizada</p>
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-layer-group text-brand-gold"></i> Procesos: Lavado, Natural y Honey</p>
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-calendar-days text-brand-gold"></i> Disponibilidad y stock estable anual</p>
+        <!-- APARTADO DETALLADO: PIÑA -->
+        <div id="frutas" class="mb-16 scroll-mt-24">
+            <h3 class="font-serif text-2xl font-bold text-brand-dark mb-6 pb-2 border-b border-gray-100 flex items-center gap-2">
+                <span class="text-amber-500"><i class="fa-solid fa-lemon"></i></span> Productos de Piña de Exportación
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                    <h4 class="font-bold text-xs text-brand-dark uppercase tracking-wide mb-1">Piña Premium en Conserva</h4>
+                    <p class="text-[11px] text-gray-500 leading-relaxed font-light">
+                        Seleccionada en su punto idóneo de maduración tropical. Conservada en un almíbar ligero que preserva su dulzura natural e integridad estructural. Disponible en formatos de rodajas o trozos para aplicaciones de repostería o consumo directo.
+                    </p>
                 </div>
-            </div>
-            <div class="mt-6 h-11 bg-emerald-50/70 rounded-lg flex items-center justify-center text-[11px] text-brand-green font-bold border border-emerald-100/40">
-                Sacos industriales estándar de 69 kg
+                <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                    <h4 class="font-bold text-xs text-brand-dark uppercase tracking-wide mb-1">Jugo Concentrado Dulce</h4>
+                    <p class="text-[11px] text-gray-500 leading-relaxed font-light">
+                        Extracto líquido puro extraído de frutos de alta calidad, libre de azúcares artificiales añadidos. Pasteurizado para mantener el aroma vivaz y la frescura nativa de la fruta de exportación.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="bg-brand-dark text-white p-6 rounded-xl shadow-lg border border-emerald-950">
-            <h3 class="text-base font-bold mb-0.5">Realiza tu Pedido</h3>
-            <p class="text-[10px] text-emerald-400 mb-4">Completa el formulario y te atenderemos en la mayor brevedad posible.</p>
-            <form class="space-y-2.5 text-xs text-gray-800">
-                <input type="text" placeholder="Nombre completo" class="w-full p-2.5 rounded-md bg-white border-none">
-                <input type="text" placeholder="Empresa (opcional)" class="w-full p-2.5 rounded-md bg-white border-none">
-                <input type="text" placeholder="País" class="w-full p-2.5 rounded-md bg-white border-none">
-                <select class="w-full p-2.5 rounded-md bg-white border-none text-gray-500 font-medium">
-                    <option disabled selected>Producto de interés</option>
-                    <option>Conservas de Fruta / Palmito</option>
-                    <option>Café de Especialidad Tostado</option>
-                    <option>Café Verde Comercial</option>
+        <!-- APARTADO DETALLADO: FUTURAS INCORPORACIONES -->
+        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center">
+            <h4 class="text-[11px] font-bold text-brand-dark uppercase tracking-widest mb-1">📦 Próximas Incorporaciones Progresivas</h4>
+            <p class="text-[11px] text-gray-500 max-w-2xl mx-auto leading-relaxed font-light">
+                Integraremos paulatinamente a la comercialización: **Harinas No Tradicionales** (finas y gruesas de yuca, plátano verde, papa, malanga, tiquisque, ñame, coco, cúrcuma y jengibre) y alimentos empacados al vacío como picadillos de verduras[cite: 2].
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CAFÉ GOURMET Y VARIEDADES DETALLADAS -->
+    <section id="cafe-gourmet" class="bg-[#0c160d] text-white py-16 border-t border-emerald-950 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-12">
+            <div class="text-center mb-12">
+                <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-1">Fincas Certificadas · 100% Arábica</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold">Variedades de Café de Especialidad</h2>
+                <div class="h-0.5 w-16 bg-brand-gold mx-auto mt-3"></div>
+            </div>
+
+            <!-- FICHAS DE CATA DE CADA VARIEDAD -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- VAR: Villa Sarchí -->
+                <div id="var-villa-sarchi" class="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between hover:bg-white/10 transition scroll-mt-24">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-emerald-800 text-[9px] font-bold px-2 py-0.5 rounded text-white uppercase tracking-wider">Proceso: Lavado</span>
+                            <span class="text-amber-400 text-sm">☕</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-white mb-1">Villa Sarchí</h3>
+                        <p class="text-[11px] text-gray-400 font-light leading-relaxed mb-3">Varietal nativo distinguido por su excelente adaptabilidad y finura aromática en taza limpia.</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-3 text-[10px] space-y-1 text-gray-300">
+                        <p><strong>Perfil:</strong> Acidez cítrica brillante y cuerpo sedoso.</p>
+                        <p><strong>Notas:</strong> Frutas dulces, manzana verde y chocolate refinado.</p>
+                    </div>
+                </div>
+
+                <!-- VAR: VS Honey -->
+                <div id="var-vs-honey" class="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between hover:bg-white/10 transition scroll-mt-24">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-amber-600 text-[9px] font-bold px-2 py-0.5 rounded text-white uppercase tracking-wider">Proceso: Honey</span>
+                            <span class="text-amber-400 text-sm">☕</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-white mb-1">VS Honey</h3>
+                        <p class="text-[11px] text-gray-400 font-light leading-relaxed mb-3">Secado meticulosamente con su mucílago natural impregnado, caramelizando el grano externamente.</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-3 text-[10px] space-y-1 text-gray-300">
+                        <p><strong>Perfil:</strong> Dulzura muy intensa con una acidez balanceada melosa.</p>
+                        <p><strong>Notas:</strong> Miel de caña, melocotón maduro y almendras tostadas.</p>
+                    </div>
+                </div>
+
+                <!-- VAR: VS Natural -->
+                <div id="var-vs-natural" class="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between hover:bg-white/10 transition scroll-mt-24">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-purple-800 text-[9px] font-bold px-2 py-0.5 rounded text-white uppercase tracking-wider">Proceso: Natural</span>
+                            <span class="text-amber-400 text-sm">☕</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-white mb-1">VS Natural</h3>
+                        <p class="text-[11px] text-gray-400 font-light leading-relaxed mb-3">Secado por completo en camas africanas con la fruta entera, propiciando fermentaciones frutales controladas.</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-3 text-[10px] space-y-1 text-gray-300">
+                        <p><strong>Perfil:</strong> Cuerpo robusto, untuoso y complejo, acidez vinosa.</p>
+                        <p><strong>Notas:</strong> Frutos rojos, arándanos silvestres y licor fino.</p>
+                    </div>
+                </div>
+
+                <!-- VAR: Geisha -->
+                <div id="var-geisha" class="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between hover:bg-white/10 transition scroll-mt-24">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-brand-gold text-brand-dark text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Variedad Exótica</span>
+                            <span class="text-amber-400 text-sm">⭐</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-white mb-1">Geisha</h3>
+                        <p class="text-[11px] text-gray-400 font-light leading-relaxed mb-3">La joya de la corona. Un varietal de alta complejidad valorado a nivel global en la alta competición.</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-3 text-[10px] space-y-1 text-gray-300">
+                        <p><strong>Perfil:</strong> Extremadamente floral, acidez cristalina sofisticada.</p>
+                        <p><strong>Notas:</strong> Jazmín, bergamota, té de limón y azahar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FILA SECUNDARIA DE CAFÉS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+                <!-- VAR: Typica Lima -->
+                <div id="var-typica-lima" class="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between hover:bg-white/10 transition scroll-mt-24">
+                    <div>
+                        <h3 class="font-serif text-base font-bold text-white mb-1">Typica Lima</h3>
+                        <p class="text-[11px] text-gray-400 font-light leading-relaxed mb-3">Lote selecto cultivado bajo condiciones climáticas específicas que resaltan los perfiles cítricos limpios.</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-2 text-[10px] text-gray-300">
+                        <p><strong>Características:</strong> Notas marcadas a ralladura de lima fresca, té negro y azúcar moreno.</p>
+                    </div>
+                </div>
+
+                <!-- VAR: Typica Lourdes -->
+                <div id="var-typica-lourdes" class="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between hover:bg-white/10 transition scroll-mt-24">
+                    <div>
+                        <h3 class="font-serif text-base font-bold text-white mb-1">Typica Lourdes</h3>
+                        <p class="text-[11px] text-gray-400 font-light leading-relaxed mb-3">Proviene de laderas de alta altitud que otorgan una maduración pausada del grano.</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-2 text-[10px] text-gray-300">
+                        <p><strong>Características:</strong> Taza muy equilibrada, chocolate con leche, caramelo artesanal y retrogusto largo.</p>
+                    </div>
+                </div>
+
+                <!-- VAR: Typica Mejorado -->
+                <div id="var-typica-mejorado" class="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between hover:bg-white/10 transition scroll-mt-24">
+                    <div>
+                        <h3 class="font-serif text-base font-bold text-white mb-1">Typica Mejorado</h3>
+                        <p class="text-[11px] text-gray-400 font-light leading-relaxed mb-3">Selección genética superior que reúne el vigor de la planta con una calidad en taza excepcional.</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-2 text-[10px] text-gray-300">
+                        <p><strong>Características:</strong> Compleja estructura ácida, notas a resina floral, ciruela pasa y dulzor denso.</p>
+                    </div>
+                </div>
+
+                <!-- VAR: Kenya SL28 -->
+                <div id="var-kenya-sl28" class="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between hover:bg-white/10 transition scroll-mt-24">
+                    <div>
+                        <h3 class="font-serif text-base font-bold text-white mb-1">Kenya SL28</h3>
+                        <p class="text-[11px] text-gray-400 font-light leading-relaxed mb-3">Varietal de origen africano perfectamente aclimatado en las tierras ricas de Costa Rica.</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-2 text-[10px] text-gray-300">
+                        <p><strong>Características:</strong> Acidez de grosella negra muy distintiva, notas a pomelo, fruta de la pasión y gran cuerpo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CALIDAD Y SERVICIO -->
+    <section id="calidad" class="max-w-7xl mx-auto px-4 md:px-12 py-16 scroll-mt-20">
+        <div class="bg-white rounded-2xl p-6 md:p-10 border border-gray-100 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-4">
+                <div>
+                    <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-1">Filosofía Empresarial</span>
+                    <h2 class="font-serif text-2xl md:text-3xl font-bold text-brand-dark">Compromiso Inquebrantable con la Calidad Total</h2>
+                    <div class="h-0.5 w-12 bg-brand-gold mt-2"></div>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed font-light">
+                    Para nosotros, la **Calidad Total** es un pilar fundamental para gestionar de forma plenamente organizada el día a día de la empresa[cite: 2]. Centramos cada esfuerzo en la excelencia de los procesos, basándonos en la participación activa de todos los miembros de la organización[cite: 2].
+                </p>
+                <p class="text-xs text-gray-600 leading-relaxed font-light">
+                    Apuntamos a la satisfacción de nuestros clientes proporcionando beneficios directos a toda nuestra cadena de valor, respaldando equitativamente a los productores y protegiendo el entorno ecológico mediante la promoción de buenas prácticas agrícolas[cite: 2].
+                </p>
+            </div>
+            <div class="lg:col-span-5 bg-gradient-to-br from-brand-cream to-emerald-50/50 p-6 rounded-xl border border-brand-green/10 text-center">
+                <div class="text-brand-green text-3xl mb-2"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4 class="font-bold text-xs text-brand-dark uppercase tracking-wider mb-2">Servicio de Exportación</h4>
+                <p class="text-[11px] text-gray-500 leading-relaxed max-w-sm mx-auto font-light">
+                    Garantizamos un servicio logístico ágil, transparente y seguro. Proveemos fichas de inocuidad, embalaje estandarizado y soporte continuo para resolver despachos internacionales[cite: 2].
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PEDIDOS -->
+    <section id="pedidos" class="max-w-4xl mx-auto px-4 py-12 bg-white border border-gray-100 rounded-2xl shadow-sm my-10 scroll-mt-20">
+        <div class="text-center mb-8">
+            <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-1">Orden de Compra y Cotizaciones</span>
+            <h2 class="font-serif text-2xl font-bold text-brand-dark">Formulario de Pedidos</h2>
+            <p class="text-[11px] text-gray-400 mt-1">Envíanos tus requerimientos de volumen y te responderemos con una cotización formal y tiempos de despacho.</p>
+        </div>
+
+        <form class="space-y-4 text-xs text-gray-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block font-bold mb-1 text-gray-600">Nombre Completo *</label>
+                    <input type="text" required placeholder="Ej: Guillermo Puchol" class="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-green">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1 text-gray-600">Correo Electrónico *</label>
+                    <input type="email" required placeholder="nombre@correo.com" class="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-green">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block font-bold mb-1 text-gray-600">Teléfono / WhatsApp *</label>
+                    <input type="tel" required placeholder="Ej: +506 8943 5264" class="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-green">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1 text-gray-600">País de Destino *</label>
+                    <input type="text" required placeholder="Ej: Costa Rica, España, USA" class="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-green">
+                </div>
+            </div>
+
+            <div>
+                <label class="block font-bold mb-1 text-gray-600">Línea de Interés de Productos *</label>
+                <select class="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-green font-medium text-gray-600">
+                    <option>Conservas de Palmito (Lotes Coopehorquetas)</option>
+                    <option>Línea de Untables Vegetales Jolly Foods</option>
+                    <option>Piña en Conserva / Jugos Industriales</option>
+                    <option>Café Gourmet de Especialidad</option>
                 </select>
-                <input type="text" placeholder="Cantidad aproximada" class="w-full p-2.5 rounded-md bg-white border-none">
-                <textarea placeholder="Detalles..." rows="3" class="w-full p-2.5 rounded-md bg-white border-none"></textarea>
-                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-md uppercase tracking-wider text-[11px] transition flex items-center justify-center gap-2 mt-3">
-                    Enviar Pedido <i class="fa-brands fa-whatsapp text-sm"></i>
-                </button>
-            </form>
-        </div>
-    </section>
+            </div>
 
-    <!-- VALORES DE LA MARCA -->
-    <section class="bg-white border-y border-gray-100 py-10">
-        <div class="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="flex flex-col items-center p-2">
-                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-full flex items-center justify-center mb-3 text-xl"><i class="fa-solid fa-leaf"></i></div>
-                <h4 class="font-bold text-xs text-gray-900 mb-1.5 uppercase tracking-wider">Sostenibilidad</h4>
-                <p class="text-[11px] text-gray-500 max-w-[170px]">Comprometidos con el desarrollo y cuidado del medio ambiente.</p>
+            <div>
+                <label class="block font-bold mb-1 text-gray-600">Mensaje y Detalles de la Orden (Volumen aproximado)</label>
+                <textarea rows="4" placeholder="Escribe aquí las cantidades deseadas, especificaciones de empaque..." class="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-green"></textarea>
             </div>
-            <div class="flex flex-col items-center p-2">
-                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-full flex items-center justify-center mb-3 text-xl"><i class="fa-solid fa-medal"></i></div>
-                <h4 class="font-bold text-xs text-gray-900 mb-1.5 uppercase tracking-wider">Calidad Premium</h4>
-                <p class="text-[11px] text-gray-500 max-w-[170px]">Seleccionamos rigurosamente lo mejor de nuestra tierra.</p>
+
+            <div class="text-center pt-2">
+                <button type="submit" class="bg-brand-green hover:bg-brand-dark text-white font-bold uppercase tracking-widest px-8 py-3.5 rounded-lg shadow-md transition duration-300 text-xs">
+                    Enviar Solicitud de Pedido <i class="fa-solid fa-paper-plane ml-1 text-[10px]"></i>
+                </button>
             </div>
-            <div class="flex flex-col items-center p-2">
-                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-full flex items-center justify-center mb-3 text-xl"><i class="fa-solid fa-truck-ramp-box"></i></div>
-                <h4 class="font-bold text-xs text-gray-900 mb-1.5 uppercase tracking-wider">Exportación</h4>
-                <p class="text-[11px] text-gray-500 max-w-[170px]">Logística ágil para llevar Costa Rica al mundo.</p>
-            </div>
-            <div class="flex flex-col items-center p-2">
-                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-full flex items-center justify-center mb-3 text-xl"><i class="fa-solid fa-map-location-dot"></i></div>
-                <h4 class="font-bold text-xs text-gray-900 mb-1.5 uppercase tracking-wider">Origen Fiel</h4>
-                <p class="text-[11px] text-gray-500 max-w-[170px]">Orgullosamente costarricenses, trabajando con pasión.</p>
-            </div>
-        </div>
+        </form>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-white pt-12 pb-5 text-xs text-gray-600">
-        <div class="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+    <footer class="bg-brand-dark text-white pt-12 pb-6 text-xs font-light">
+        <div id="contacto" class="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-emerald-950 pb-8 mb-6 scroll-mt-20">
             <div>
-                <h4 class="font-bold text-gray-900 uppercase tracking-widest text-[11px] mb-4 border-b border-gray-100 pb-1">Contacto</h4>
-                <ul class="space-y-2.5 text-[11px]">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-green"></i> +506 8943 5264</li>
-                    <li class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-green"></i> +506 8943 5264</li>
-                    <li class="flex items-center gap-2"><i class="fa-regular fa-envelope text-brand-green"></i> guillermopuchol@gmail.com</li>
+                <h4 class="font-serif font-bold text-base text-brand-gold mb-3">Jolly Foods</h4>
+                <p class="text-gray-400 text-[11px] leading-relaxed max-w-xs">
+                    Pyme costarricense enfocada en la innovación de productos naturales y la proyección del café gourmet de alta especialidad[cite: 1].
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase tracking-widest text-[11px] text-gray-200 mb-3">Canales de Atención</h4>
+                <ul class="space-y-2 text-gray-400 text-[11px]">
+                    <li><i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> +506 8943 5264</li>
+                    <li><i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i> +506 8943 5264</li>
+                    <li><i class="fa-regular fa-envelope text-emerald-400 mr-1.5"></i> guillermopuchol@gmail.com</li>
                 </ul>
             </div>
-            <div class="md:col-span-2 flex flex-col justify-between items-start">
-                <div>
-                    <h4 class="font-bold text-gray-900 uppercase tracking-widest text-[11px] mb-3">¡Hablemos!</h4>
-                    <p class="text-[11px] text-gray-500 max-w-sm">Estamos a tu completa disposición para atender consultas mayoristas y envíos globales con los estándares más altos de Costa Rica.</p>
-                </div>
-                <a href="https://wa.me/50689435264" target="_blank" class="mt-4 bg-brand-green text-white font-bold uppercase tracking-wider px-4 py-2 rounded text-[10px] flex items-center gap-2">
-                    Escríbenos <i class="fa-brands fa-whatsapp"></i>
-                </a>
-            </div>
-            <div class="flex flex-col justify-between items-end">
-                <div class="w-full text-right">
-                    <h4 class="font-bold text-gray-900 uppercase tracking-widest text-[11px] mb-3">Síguenos</h4>
-                    <div class="flex justify-end gap-3 text-base text-gray-700">
-                        <a href="#" class="hover:text-brand-green"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="hover:text-brand-green"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="w-36 h-14 bg-cover bg-center rounded-lg mt-4 opacity-75 border border-gray-100" style="background-image: url('https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=150&q=80');"></div>
+            <div>
+                <h4 class="font-bold uppercase tracking-widest text-[11px] text-gray-200 mb-3">Ubicación y Origen</h4>
+                <p class="text-gray-400 text-[11px] leading-relaxed">
+                    Plantas agroindustriales asociadas en Coopehorquetas y fincas de alta especialidad cafetera, Costa Rica[cite: 2].
+                </p>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 md:px-12 pt-5 border-t border-gray-100 flex flex-wrap justify-between items-center text-[10px] text-gray-400 gap-2">
-            <p>&copy; 2026 Jolly Foods Natural Preserves. Todos los derechos reservados.</p>
-            <div class="flex gap-4">
-                <a href="#" class="hover:underline">Política de Privacidad</a>
-                <a href="#" class="hover:underline">Términos y Condiciones</a>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 md:px-12 flex flex-wrap justify-between items-center text-[10px] text-gray-500 gap-2">
+            <p>&copy; 2026 Jolly Foods & Natural Preserves SRL. Todos los derechos reservados.</p>
+            <p>Hecho en Costa Rica con Sostenibilidad Agropecuaria.</p>
         </div>
     </footer>
 
