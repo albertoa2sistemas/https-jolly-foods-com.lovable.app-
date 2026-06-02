@@ -37,7 +37,7 @@
 </head>
 <body class="bg-brand-cream text-gray-800 antialiased font-sans">
 
-    <!-- BLOQUE 1: BARRA SUPERIOR DE CONTACTO -->
+    <!-- BARRA SUPERIOR DE CONTACTO -->
     <div class="bg-brand-dark text-white text-[11px] py-2 px-4 md:px-12 flex flex-wrap justify-between items-center gap-2 border-b border-emerald-900/30">
         <div class="flex items-center gap-6 flex-wrap">
             <span class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-emerald-400"></i> Envíos internacionales</span>
@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <!-- BLOQUE 2: NAVBAR PRINCIPAL -->
+    <!-- NAVBAR PRINCIPAL -->
     <header class="bg-white shadow-sm sticky top-0 z-50 px-4 md:px-12 py-3.5 flex justify-between items-center">
         <div class="flex items-center gap-2">
             <div class="text-brand-green text-3xl"><i class="fa-solid fa-leaf"></i></div>
@@ -78,7 +78,7 @@
         </a>
     </header>
 
-    <!-- BLOQUE 3: HERO BANNER PRINCIPAL -->
+    <!-- HERO BANNER -->
     <section class="relative bg-gradient-to-br from-[#122b15] via-[#1a3d1f] to-[#112413] text-white min-h-[520px] flex items-center overflow-hidden">
         <div class="absolute inset-0 opacity-15 bg-cover bg-center mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=1200&q=80');"></div>
         
@@ -135,7 +135,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 4: SOBRE NOSOTROS Y RESPALDO DE ANTONIO BARRANTES -->
+    <!-- SOBRE NOSOTROS Y RESPALDO DE ANTONIO BARRANTES -->
     <section id="nosotros" class="max-w-7xl mx-auto px-4 md:px-12 py-16 bg-white rounded-2xl my-10 shadow-sm border border-gray-100/50">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
@@ -231,7 +231,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 5: NUESTROS PRODUCTOS ESTRELLA -->
+    <!-- NUESTROS PRODUCTOS ESTRELLA -->
     <section id="productos" class="max-w-7xl mx-auto px-4 md:px-12 py-16">
         <div class="text-center mb-12">
             <h2 class="text-brand-dark text-lg font-bold tracking-widest uppercase flex items-center justify-center gap-2">
@@ -301,7 +301,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 6: CAFÉ GOURMET DE COSTA RICA -->
+    <!-- CAFÉ GOURMET DE COSTA RICA -->
     <section id="cafe" class="bg-[#0b140c] text-white py-16 border-y border-emerald-950">
         <div class="max-w-7xl mx-auto px-4 md:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -358,7 +358,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 7: GESTIÓN DE PEDIDOS Y FORMULARIO DE CONTACTO -->
+    <!-- GESTIÓN DE PEDIDOS Y FORMULARIO DE CONTACTO -->
     <section id="contacto" class="max-w-7xl mx-auto px-4 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex flex-col justify-between">
             <div>
@@ -420,7 +420,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 8: VALORES DE LA MARCA -->
+    <!-- VALORES DE LA MARCA -->
     <section class="bg-white border-y border-gray-100 py-10">
         <div class="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div class="flex flex-col items-center p-2">
@@ -446,7 +446,7 @@
         </div>
     </section>
 
-    <!-- BLOQUE 9: FOOTER -->
+    <!-- FOOTER -->
     <footer class="bg-white pt-12 pb-5 text-xs text-gray-600">
         <div class="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
             <div>
